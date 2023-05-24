@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+	<link rel="stylesheet" href="guessing-game.css">
+</head>
+<body>
+	<h1>Guessing Game</h1>
+	<p>I'm thinking of a number between 1 and 100. Can you guess what it is?</p>
+	<div class="input-group">
+		<input type="number" id="guess" min="1" max="100">
+		<button id="submit" onclick="guess()">Guess</button>
+	</div>
+	<p id="result"></p>
+	<script src="guessing-game.js"></script>
+    <button class="button-green" onclick="viewBestRounds()">View Best Rounds</button>
+    <button class="button-red" onclick="startOver()">Start Over</button>
+    
+    <style>
+        .button-green {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+    
+        .button-red {
+            background-color: #FF0000;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+    
+        .button-green:hover {
+            background-color: #3e8e41;
+        }
+    
+        .button-red:hover {
+            background-color: #b30000;
+        }
+    </style>
+        
+</body>
+</html>

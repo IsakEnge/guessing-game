@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Best Rounds</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		li {
+			margin: 10px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+			border: none;
+			border-radius: 10px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Best Rounds</h1>
+	<p>Here are your best rounds sorted from best to worst:</p>
+	<ul id="best-rounds-list"></ul>
+	<button onclick="goBack()">Go Back</button>
+	<button onclick="startOver()">Start Over</button>
+
+	<script>
+		let bestRoundsString = sessionStorage.getItem("bestRounds");
+		let bestRoundsList = document.getElementById("best-rounds-list");
+		bestRoundsList.innerHTML = bestRoundsString;
+
+		function goBack() {
+			window.history.back();
+		}
+
+		function startOver() {
+			sessionStorage.clear();
+			window.location.href = "main.html";
+		}
+	</script>
+</body>
